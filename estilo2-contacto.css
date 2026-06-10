@@ -1,0 +1,249 @@
+/* ==========================
+   NUESTRO EQUIPO
+========================== */
+
+.equipo{
+    margin-top: 100px;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.equipo h2{
+    color: #21B1B9;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.descripcion-equipo{
+    color: #21B1B9;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.contenedor-equipo{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.miembro{
+
+    width: 320px;
+
+    background: rgba(227,227,227,0.95);
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+
+    transition: all .4s ease;
+}
+
+.miembro:hover{
+
+    transform: translateY(-12px);
+
+    box-shadow: 0 15px 35px rgba(33,177,185,.4);
+}
+
+.miembro img{
+
+    width: 140px;
+    height: 140px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 5px solid #21B1B9;
+
+    margin-bottom: 15px;
+}
+
+.miembro h3{
+
+    color: #333333;
+
+    margin-bottom: 10px;
+
+    font-size: 1.4rem;
+}
+
+.miembro .cargo{
+
+    color: #199AA0;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.miembro p{
+
+    color: #555;
+
+    line-height: 1.6;
+}
+
+.miembro .correo{
+
+    margin-top: 15px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #B3B3B3;
+
+    color: #333333;
+
+    font-size: .95rem;
+}
+
+/* ==========================
+   CREDENCIALES DEL EQUIPO
+========================== */
+
+.contenedor-equipo{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    margin-top: 50px;
+}
+
+.credencial{
+
+    width: 380px;
+
+    display: flex;
+
+    background: linear-gradient(
+        135deg,
+        #21B1B9,
+        #199AA0
+    );
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.25);
+
+    transition: .4s;
+}
+
+.credencial:hover{
+
+    transform: translateY(-10px);
+}
+
+.foto{
+
+    width: 35%;
+
+    background: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.foto img{
+
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 4px solid #21B1B9;
+}
+
+.info{
+
+    width: 65%;
+
+    padding: 20px;
+
+    color: white;
+}
+
+.logo-mini{
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    margin-bottom: 10px;
+}
+
+.info h3{
+
+    font-size: 1.2rem;
+
+    margin-bottom: 10px;
+}
+
+.cargo{
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+
+    color: #E3E3E3;
+}
+
+.info p{
+
+    margin-bottom: 8px;
+}
+
+/* ==========================
+   BOTÓN RETORNO
+========================== */
+
+.boton-retorno{
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 15px 30px;
+
+    background: linear-gradient(
+        135deg,
+        #21B1B9,
+        #199AA0
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.25);
+
+    transition: .4s;
+}
+
+.boton-retorno:hover{
+
+    transform: translateY(-8px) scale(1.05);
+
+    box-shadow: 0 10px 30px rgba(33,177,185,.5);
+}

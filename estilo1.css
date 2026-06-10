@@ -1,0 +1,327 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body{
+
+    min-height: 100vh;
+
+    background-image:
+    linear-gradient(
+        rgba(51,51,51,0.82),
+        rgba(227,227,227,0.82)
+    ),
+    url("fondo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ==========================
+   MENÚ SUPERIOR
+========================== */
+
+.menu{
+
+    background: rgba(51,51,51,.95);
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 30px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.3);
+
+    position: relative;
+
+    z-index: 1000;
+}
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo{
+
+    margin-right: 40px;
+}
+
+.logo img{
+
+    width: 85px;
+    height: 85px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 3px solid #21B1B9;
+
+    transition: .4s;
+}
+
+.logo img:hover{
+
+    transform: scale(1.05);
+
+    box-shadow: 0 0 20px #21B1B9;
+}
+
+/* ==========================
+   MENÚ PRINCIPAL
+========================== */
+
+.menu > ul{
+
+    list-style: none;
+
+    display: flex;
+}
+
+.menu > ul > li{
+
+    position: relative;
+}
+
+.menu > ul > li > a{
+
+    display: block;
+
+    padding: 30px 25px;
+
+    text-decoration: none;
+
+    color: #E3E3E3;
+
+    font-size: 1.1rem;
+
+    transition: .3s;
+}
+
+.menu > ul > li > a:hover{
+
+    background: #199AA0;
+}
+
+/* ==========================
+   SUBMENÚ
+========================== */
+
+.submenu{
+
+    list-style: none;
+
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 220px;
+
+    background: #21B1B9;
+
+    border-radius: 0 0 12px 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.25);
+}
+
+.submenu li{
+
+    width: 100%;
+}
+
+.submenu a{
+
+    display: block;
+
+    padding: 15px 20px;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.submenu a:hover{
+
+    background: #199AA0;
+}
+
+.menu > ul > li:hover .submenu{
+
+    display: block;
+}
+
+/* ==========================
+   CONTENIDO PRINCIPAL
+========================== */
+
+main{
+
+    text-align: center;
+
+    padding: 100px 20px;
+}
+
+/* ==========================
+   BIENVENIDA
+========================== */
+
+.bienvenida{
+
+    color: #21B1B9;
+
+    font-size: 5rem;
+
+    margin-bottom: 30px;
+
+    opacity: 0;
+
+    animation: aparecer 3s ease forwards;
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to{
+
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================
+   DESCRIPCIÓN
+========================== */
+
+.descripcion{
+
+    color: #E3E3E3;
+
+    font-size: 1.3rem;
+
+    max-width: 850px;
+
+    margin: auto;
+
+    line-height: 1.6;
+}
+
+/* ==========================
+   TARJETAS
+========================== */
+
+.contenedor{
+
+    margin-top: 70px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 40px;
+
+    flex-wrap: wrap;
+}
+
+.tarjeta{
+
+    width: 320px;
+
+    background: rgba(227,227,227,.92);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.25);
+
+    transition: .4s;
+}
+
+.tarjeta:hover{
+
+    transform: translateY(-10px);
+}
+
+.tarjeta img{
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+}
+
+.tarjeta h3{
+
+    color: #333333;
+
+    margin: 15px 0;
+}
+
+.tarjeta p{
+
+    color: #555;
+
+    padding: 0 20px 20px;
+
+    line-height: 1.6;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width: 768px){
+
+    .menu{
+
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .menu > ul{
+
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu > ul > li{
+
+        width: 100%;
+    }
+
+    .submenu{
+
+        position: static;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .bienvenida{
+
+        font-size: 3rem;
+    }
+
+    .descripcion{
+
+        font-size: 1rem;
+    }
+}
